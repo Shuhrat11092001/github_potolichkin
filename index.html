@@ -21,9 +21,7 @@ fetch('api.php')
     var parsedResponse = JSON.parse(response); // Преобразование JSON-строки в объект JavaScript
 
    // Преобразование юникод-последовательностей в русские символы
-    var regionName = decodeURIComponent(JSON.stringify(parsedResponse.region_name).replace(/\\u([\d\w]{4})/gi, function (match, grp) {
-    return String.fromCharCode(parseInt(grp, 16));
-}));
+
 
 console.log(regionName); // Выведет "Бухара"
 })
