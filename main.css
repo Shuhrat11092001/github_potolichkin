@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+*,p{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main {
+    background: #FFFDFd;
+    
+}
+.header_btn{
+    background-color: #FD9C42;
+    border-radius: 10px;
+    padding: 8px 40px;
+    font-weight: 400;
+    color:white;
+    outline: none;
+    border:1px solid black;
+    box-shadow:3px 3px 10px gray;
+}
+header{
+    padding:0.2rem 2rem;
+    background: #FFFDF3 ;
+
+}
+.header_info{
+    display: flex;
+    align-items: center;
+    color:#007AC3;
+    font-weight: 500;
+}
+.header_info a{
+    font-size: 24px
+    ;
+    margin-left: 10px;
+
+}
+.header_info a:-child{
+}
+.header_info p{
+    font-size: large;
+    margin-right: 10px;
+}
+
+.calculator{
+    max-width: 400px;
+    background: #fff ;
+    box-shadow:1px 1px 10px rgba(246, 176, 84, 0.397);
+    border-radius:10px;
+    
+}
+.calc_head{
+    background: #3E95D1  ;
+    width: 100%;
+    border-radius:10px;
+    padding: 30px 15px ;
+    color:#FFFDF3;
+}
+.calc_head h3{
+    background: transparent;
+}
+.calc_head_input input{
+    width: 100px;
+}
+label{background: transparent;
+}
+.calc_body{
+    padding: 1rem;
+}
+.price_text{
+    color:#FD9C42;
+    font-size: 50px;
+    font-weight: 700;    
+}
