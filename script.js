@@ -15,3 +15,52 @@ console.log(regionName); // Выведет "Бухара"
 .catch(error => {
     console.error('Error:', error);
 });
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    slides[slideIndex].style.display = 'flex';
+    dots[slideIndex].classList.add('active');
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+    plusSlides(-1);
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    plusSlides(1);
+});
+
+const dots = document.querySelectorAll('.dot');
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide(index);
+    });
+});
+intervalId = setInterval(() => {
+    plusSlides(1);
+}, 3000); // Интервал в миллисекундах (здесь 3000 мс = 3 секунды)
