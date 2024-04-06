@@ -26,7 +26,6 @@
 }
 .hero_content{
     margin-top: 11rem;
-
 }
 .hero_wrapper{
     background:#3E95D1;
@@ -53,4 +52,7 @@
 }
 .hero_tab_title h1{
     font-size: 32px;
+}
+.hero_tab{
+    padding-bottom:10rem;
 }
