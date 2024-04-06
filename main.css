@@ -1,17 +1,18 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
+@import url(/slider.css);
+@import url(/contacts.css);
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background: #FFFDF3;
+
 }
 *,p{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.main {
-    background: #FFFDF3;
-    
-}
+
 .header_btn{
     background-color: #FD9C42;
     border-radius: 10px;
@@ -40,8 +41,7 @@ header{
 
 }
 
-.header_info a:-child{
-}
+
 .header_info p{
     font-size: large;
     margin-right: 10px;
@@ -111,6 +111,13 @@ label{background: transparent;
     font-size: 13px;
     margin-top: 10px;
 }
+.banner{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    }
 .banner_title{
     font-weight:600;
     font-size: 60px;
@@ -118,22 +125,27 @@ label{background: transparent;
     color:black;
     text-shadow: 0px 2px 5px gray;
 }
+.banner_title span{
+    color: #007AC3;
+}
 .banner_info{
     color:white;
     background:#3E95D1;
     width: 590px;
     padding: 2rem 1.4rem;
     border-radius:10PX;
-}
-.banner_info_title h4{
+     align-self:flex-end;
+    margin-right: 20px;
+    }
+.banner_info h4{
     font-weight:600;
     font-size: 37px;
 
 }
-.banner_info_title p{
+.banner_info p{
     font-size: 20px;
 }
-.banner_info_title button{
+.banner_info button{
     background: #FD9C42;
     border:none;
     color:white;
@@ -142,7 +154,65 @@ label{background: transparent;
     border-radius: 10px;
     font-size: 20px;
 }
+
+.banner_body{
+    justify-content: space-between;
+}
 .builder{
-    bottom:0;
-    left:0;
+    bottom: 0;
+    transform: translateY(40px);
+}
+.main{
+    background: #FFFDF3;
+
+}
+.banner_inner {
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width:1400px) {
+    .builder{
+        transform: translateX(-10rem);
+    }
+}
+@media (max-width:1200px) {
+    .builder img{
+        width: 200px;
+    }
+    .banner_title{
+        font-size: 50px;
+    }
+}
+.about{
+    max-width: 1199px;
+    margin: 0 auto;
+}
+.about_title h4{
+    font-size: 20px;
+    color: #A3A29B;
+
+}
+.about_title h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #000;
+}
+.about_title p{
+    font-size: 22px;
+}
+.about_footer{
+
+}
+.about_card{
+    text-align: center;
+
+}
+.about_card p{
+    font-size: 22px;
+    color:#000;
+}
+.about_card h1{
+    text-align: center;
+    color:#F36F22;
+    font-size: 70px;
 }
