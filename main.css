@@ -64,7 +64,10 @@ header{
     background: transparent;
 }
 .calc_head_input input{
-    width: 100px;
+    width: 35%;
+    outline: none;
+    border:none;
+    padding:0 0 0 10px;
 }
 label{background: transparent;
 }

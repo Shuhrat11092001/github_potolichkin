@@ -26,7 +26,7 @@ $url = "https://api.ip2location.io/?key={$api_key}&ip={$user_ip}";
 // Получение ответа от API
 $response = file_get_contents($url);
 
-// Парсинг JSON-ответа
+// Парсинг JSON-ответа  
 $data = json_decode($response, true);
 $city = isset($data['region_name']) ? $data['region_name'] : 'Unknown';
 
