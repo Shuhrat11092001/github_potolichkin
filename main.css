@@ -216,3 +216,182 @@ label{background: transparent;
     color:#F36F22;
     font-size: 70px;
 }
+
+
+
+.hero_img{
+    top: 0;
+    right: 0;
+    z-index: -10;
+    width: 100px;
+    margin:0px 0 0 0;
+}
+.hero_header{
+    background: #FFE2C7;
+    max-width:540px;
+    text-align:center;
+    margin:0 auto;
+    border-radius:30px;
+
+}
+.hero_header h5{
+    padding:20px 1rem;
+}
+
+.hero{
+    margin-top: 10rem;
+}
+.hero_builder{
+    position: absolute;
+    top: 0;
+}
+.hero_content{
+    margin-top: 11rem;
+}
+.hero_wrapper{
+    background:#3E95D1;
+    color:white;
+}
+.hero_content_title {
+    color:white;
+    
+}
+.hero_content_title h1{
+    font-size: 50px;
+    font-weight: 600;
+
+}
+.hero_content_title p {
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 30px;
+}
+.hero_content_title h4{
+    font-size: 22px;
+    
+    font-weight: 300;
+}
+.hero_tab_title h1{
+    font-size: 32px;
+}
+.hero_tab{
+    padding-bottom:10rem;
+}
+
+.contacts{
+    background: #FD9C42;
+    color:white;
+    padding:60px 0;
+}
+.contact_builder{
+    right: 0;
+    transform: translateY(-200px);
+}
+.contacts_data button{
+    background: #007AC3;
+    color:white;
+    border-radius :10px;
+    border:none;
+}
+
+
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    animation: slide-in 1s ease;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card {
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+.card_body{
+    padding: 1rem !important;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #FD9C42;
+}
+.card_like{
+    width: 30px;
+    right: 0;
+    margin: 10px;
+}
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 10px); /* 50% ширины слайда с учетом отступов */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: calc(100% - 10px); /* 100% ширины слайда с учетом отступов */
+    }
+}

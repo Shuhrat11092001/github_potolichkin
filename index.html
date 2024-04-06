@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"  href="node_modules/bootstrap/dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./hero.css">
     
 
 </head>
 <body>
     <header class=" d-flex justify-content-between align-items-center   ">   
         <div> 
-            <img src="./assets/logo.png" alt="">
+            <img src="./Webp/logo.webp" alt="">
         </div>
         <div>
             <button class="header_btn">Мы перезвоним</button>
@@ -21,8 +20,8 @@
     <div class="mt-2">
         <div class="header_info">
                 <p class="mb-0">8 888 888 88 88</p>
-                    <a  class="" href=""><img src="./assets/Group 1520.svg" alt=""></a>
-                    <a class="" href=""><img src="./assets/Group 1521.svg" alt=""></a>
+                    <a  class="" href=""><img src="./Webp/Group 1520.webp" alt=""></a>
+                    <a class="" href=""><img src="./Webp/Group 1521.webp" alt=""></a>
         </div>
         <div class="day-off text-end">
             <p  class="">9:00 - 21:00 без выходных</p>
@@ -70,11 +69,11 @@
                         <p class="fs-4">Со скидкой будет</p>
                         <div class="d-flex align-items-center">
                             <div class="price_text">46900</div>
-                            <img src="./assets/₽.svg" class="" alt="">
+                            <img src="./Webp/₽.webp" width="40" alt="">
                         </div>
                         <div class="d-flex align-items-center">
                             <div class="fs-4">А без нее было бы: 52 000 </div>
-                            <img src="./assets/₽ (1).svg" alt="">
+                            <img src="/Webp/₽ (1).webp" width="20" alt="">
                         </div>
                         <div class="d-flex align-items-center mt-4 discount rounded-3 justify-content-between ">
                             <div class="discount_lamp">
@@ -294,7 +293,74 @@
         </div>
     </section>
 
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="./script.js"></script>
+        <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    fetch('api.php')
+.then(response => response.json()) // Преобразование ответа в JSON
+.then(data => {
+    var region = data.region_name || 'Unknown'; // Получение города или использование значения 'Unknown', если город не был получен
+    console.log("Received city name:", region);
+    var parsedResponse = JSON.parse(response); // Преобразование JSON-строки в объект JavaScript
+
+   // Преобразование юникод-последовательностей в русские символы
+    var regionName = decodeURIComponent(JSON.stringify(parsedResponse.region_name).replace(/\\u([\d\w]{4})/gi, function (match, grp) {
+    return String.fromCharCode(parseInt(grp, 16));
+}));
+
+console.log(regionName); // Выведет "Бухара"
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    slides[slideIndex].style.display = 'flex';
+    dots[slideIndex].classList.add('active');
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+}
+
+function currentSlide(n) {
+    slideIndex = n;
+    showSlides();
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+    plusSlides(-1);
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    plusSlides(1);
+});
+
+const dots = document.querySelectorAll('.dot');
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide(index);
+    });
+});
+intervalId = setInterval(() => {
+    plusSlides(1);
+}, 3000); // Интервал в миллисекундах (здесь 3000 мс = 3 секунды)
+</script>
     </body>
 </html>
