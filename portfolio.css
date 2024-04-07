@@ -1,0 +1,10 @@
+.portfolio{
+    margin-top: 30rem;
+}
+.portfolio_cards{
+    display: flex;
+    gap: 30px;
+}
+.portfolio_card{
+    width:378px;
+}

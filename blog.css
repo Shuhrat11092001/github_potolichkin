@@ -1,0 +1,18 @@
+.tab_body{
+    max-width: 793px;
+}
+.tab_head{
+    color:coral;
+}
+.blog_title p{
+
+    font-size: 22px;
+    color:#000000
+}
+.blog_title h5{
+    color:#A3A29B;
+}
+.blog{
+    margin-top: 12rem;
+    padding-bottom: 12rem;
+}

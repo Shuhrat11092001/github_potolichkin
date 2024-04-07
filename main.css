@@ -12,7 +12,8 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
-
+.container {
+}
 .header_btn{
     background-color: #FD9C42;
     border-radius: 10px;
@@ -170,19 +171,8 @@ label{background: transparent;
     display: flex;
     justify-content: space-evenly;
 }
-@media (max-width:1400px) {
-    .builder{
-        transform: translateX(-10rem);
-    }
-}
-@media (max-width:1200px) {
-    .builder img{
-        width: 200px;
-    }
-    .banner_title{
-        font-size: 50px;
-    }
-}
+
+
 .about{
     max-width: 1199px;
     margin: 0 auto;
@@ -384,14 +374,32 @@ label{background: transparent;
     right: 0;
     margin: 10px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .card {
         width: calc(50% - 10px); /* 50% ширины слайда с учетом отступов */
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .card {
         width: calc(100% - 10px); /* 100% ширины слайда с учетом отступов */
     }
+}
+.contacts_data {
+    max-width: 350px;
+    margin-top: 2rem;
+
+}
+.contacts_data input{
+    width: 100%;
+    padding: 0.4rem 10px;
+    border-radius:6px;
+    outline: none;
+    border:none;
+}
+.contacts_data button{
+    width: 100%;
+
+    margin-top: 0.5rem;
+    padding: 0.4rem;
 }
