@@ -2,19 +2,95 @@
     .builder{
         transform: translateX(-10rem);
     }
+    .car-builder{
+        width: 350px;
+    }
+    .form-item{
+        width: 1100px;
+    }
+    .form-builder{
+        transform: translate(0px, -230px);
+    }
+        .form-text{
+            
+        transform: translate(120px, -200px);
+        }
 }
 @media (max-width:1200px) {
-    .builder img{
+    .builder img  {
         width: 200px;
+        height: auto;
+        transform: translateX(40px);
+
+        
     }
     .banner_title{
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .banner{
+    }
+    .banner_info{
+        width:490px;
+    }
+    .form-item{
+        border-radius:0;
+        width: 100%;
+        padding: 60px 10px;
+    }
+    .form-text{
+        transform: translate(10px, -200px);
+        z-index: 10;
+    }
+        .form-builder{
+        transform: translate(0px, -230px);
     }
 }
 @media (max-width:1000px) {
     .header_btn{
         display: none ;
     }
+    
+
+    .car-builder{
+        width: 250px;
+    }
+    .pattern{
+    display: none;        
+    }
+    .form-item{
+        padding: 60px 60px;
+    }
+    .form-body{
+        width: 100%;
+    }
+    .form-text{
+        transform: translate(20px, -200px);
+        z-index: 10;
+        width: 450px;
+        font-size: 16px;
+        padding: 30px;
+    }
+    .potolki_card_body p{
+        font-size: 16PX;
+    }
+        .banner_info{
+            width: 390px;
+        }
+    
+}
+@media (max-width:860px){
+    .map_fotter{
+        justify-content: center;
+    }
+    .car-builder{
+        display: none;
+    }
+    .items-cards{
+        grid-template-columns: repeat(2,1fr);
+}
+.tabs{
+    display: block;
+}
 }
 @media (max-width:768px) {
   
@@ -22,6 +98,23 @@
         background: #eaf2ee;
         border-radius:10px;
         padding: 0 5px;
+    }
+    .builder{
+        transform: translateX(-96px);
+    }
+    .calculator{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .banner_info{
+        width: 390px !important;
+        margin: 0;
+        background: #FD9C42;
+    }
+    .banner_info button{
+        background: #007AC3;
+        width: 100%;
     }
     .day-off{
         display: none;
@@ -44,16 +137,86 @@
         position: static;
         width: 50%;
     }
-    .performance_text img{
+    .performance_text img {
         z-index: -10;
     transform:translate(-10px, 10px) rotate(-50deg);
     
 }
-.performance_cards{
+.banner_info{
+    width: 302px;
+}
+.banner_info h4{
+    font-size: 26px;
+}
+.banner_info p{
+    font-size: 18px;
+}
+
+    .tab{
+        border-bottom: 1px solid gray;
+
+    }
+    .tab_head h5{
+        font-weight: bold;
+
+    }
+    .tab_head{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    .tab-icons{
+        display: block;
+    }
+    .tab_body{
+        padding-bottom: 10px;
+        display: none;
+    }
+     .active .tab_body{
+        
+        display: block ;
+    }
+    .about_footer{
+        display: block !important;
+    }
+    .about_card{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .about_card h1{
+        font-size: 44px;
+        margin-right: 10px;
+    }
+    .about_card p{
+        font-size: 16px;
+    }
+    .star{
+        display: none;
+    }
+.form-builder{
+        transform: translate(0px, -220px);
+    
+}
+.performance_card{
     display: block !important; 
 }
+
     .performance_btn{
         max-width: 600px;
+    }
+    .form-text{
+        transform: translate(20px, -190px);
+        z-index: 10;
+        width: 250px;
+        font-size: 16px;
+        padding: 20px;
+    }
+    .tab{
+        display: block;
+    }
+    .banner_inner{
+        display: block;
     }
 }
 
@@ -61,14 +224,61 @@
     .logo{
         width: 200px;
     }
-    .logo img{
+    .about_title h1{
+            font-size: 28px;
+    }
+    .about_title p{
+        font-size: 18px;
+}
+    .logo img  {
         width: 100%;
     }
     header{
         padding: 0;
     }
-    .icons img{
+    .icons img  {
         width: 40px;
+    }
+    .form-title h1{
+        font-size: 25px;
+    }
+    .form-title p{
+        font-size: 15px;
+    }
+    .form-item{
+        padding: 60px 10px;
+    }
+    .form-builder{
+        width: 250px;
+        transform: translate(0px, -60px);
+        
+    }
+    .form-text{
+        transform: translate(30px, -16  0px);
+        z-index: 10;
+        width: 250px;
+        font-size: 16px;
+        padding: 20px;
+    }
+    .performance_title h1{
+        font-size: 28px;
+    }
+    .performance_title p{
+        font-size: 18px;
+        width: 60%;
+    }
+    .performance_cards{
+        gap: 10px;
+    }
+    .performance_card_card h5{
+        font-size: 18px;
+    }
+    .performance_card_card p{
+        font-size: 16px;
+    }
+    .banner_info{
+        width: 302px !important;
+        padding: 2rem 1.3rem 10px;
     }
 }
 
@@ -76,17 +286,44 @@
     .logo{
         width: 152px;
     }
-    .logo img{
+    .logo img {
         width: 100%;
+    }
+    .item-header h1{
+        font-size: 26px;
+    }
+    .itemcard{
+        text-align: start;
+        padding:0 2px;
+    }
+    .itemcard p{
+        font-size: 16px;
+    }
+    .itemcard img{
+        width: 30px;
+        height: 30px;
+    }
+    .itemcard h5{
+        font-size: 18px;
     }
     header{
         padding: 0;
     }
-    .icons img{
+    .icons img {
         width: 25px;
     }
     .header_info p{
         font-size: 16px;
         margin-right: 0;    
+    }
+    .map_footer-title h1{
+        font-size: 25px;
+    }
+    .buttons button{
+        width: 100%;
+    }
+    .map-icons{
+        width: 25px;
+        height: 25px;
     }
 }   

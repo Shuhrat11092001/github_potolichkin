@@ -1,0 +1,10 @@
+.footer{
+    background: #3E95D1;
+}
+.fotter_items{
+    display: flex;
+    justify-content: flex-start;
+}
+.fotter-item {
+    margin-right: 150px;
+}

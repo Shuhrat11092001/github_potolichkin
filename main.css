@@ -209,7 +209,7 @@ label{background: transparent;
 
 
 
-.hero_img{
+.hero_img {
     top: 0;
     right: 0;
     z-index: -10;
@@ -222,18 +222,24 @@ label{background: transparent;
     text-align:center;
     margin:0 auto;
     border-radius:30px;
-
 }
 .hero_header h5{
     padding:20px 1rem;
 }
-
+.tab{
+    display: flex;
+    justify-content: space-between;
+}
+.tab-icons{
+    display: none;
+}
 .hero{
     margin-top: 10rem;
 }
 .hero_builder{
     position: absolute;
     top: 0;
+    right: 0;
 }
 .hero_content{
     margin-top: 11rem;
@@ -402,4 +408,22 @@ label{background: transparent;
 
     margin-top: 0.5rem;
     padding: 0.4rem;
+}
+.tab_body{
+    max-width: 793px;
+}
+.tab_head{
+    color:coral;
+}
+.blog_title p{
+
+    font-size: 22px;
+    color:#000000
+}
+.blog_title h5{
+    color:#A3A29B;
+}
+.blog{
+    margin-top: 12rem;
+    padding-bottom: 12rem;
 }

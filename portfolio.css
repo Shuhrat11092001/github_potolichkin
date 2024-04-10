@@ -2,9 +2,26 @@
     margin-top: 30rem;
 }
 .portfolio_cards{
-    display: flex;
+    display: grid;
     gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 3.4rem;
+    padding-bottom: 10rem;
 }
 .portfolio_card{
-    width:378px;
+    width:100%;
+    box-shadow:1px 1px 20px rgba(188, 164, 105, 0.281);
+    
+}
+.portfolio_card_text {
+    margin-top: 0.6rem;
+}
+.card-body p{
+    margin-top:10px ;
+    font-size: 20px;
+}
+.portfolio_card_text{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
 }
